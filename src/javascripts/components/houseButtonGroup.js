@@ -5,7 +5,7 @@ const createHouseButtonGroup = () => {
   const houses = houseData.getHouses();
   const domString = `
   <div class="house-button-group">
-    ${houses.map((house) => houseButton.createHouseButton(house))}
+    ${houses.map((house) => houseButton.createHouseButton(house)).join('')}
   </div>`;
 
   $('#button-container').html(domString);

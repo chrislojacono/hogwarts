@@ -14,10 +14,11 @@
   }
 }
 
-.student-gryffindor {
-  @extend %student-card;
-
-  h2 {
-    @include text(lg, $gryffindor);
+@each $house, $house-color in $house-list{
+  .student-#{$house} {
+    @extend %student-card;
+    h2 {
+      @include text(lg, $color:$white);
+    }
   }
 }
